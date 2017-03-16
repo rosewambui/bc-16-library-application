@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>User template</title>
+
+    
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../static/css/viewport.css" rel="stylesheet">
+
+    <link href="../static/css/users.css" rel="stylesheet">
+
+
+    
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">View Books <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Engineering</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Arts</a></li>
+            <li><a href="#">Literature</a></li>
+            <li><a href="#">Journals</a></li> 
+
+                    
+          </ul>
+        </div>
+        <div class="user">
+        <h1>Welcome to the Library Platform</h1>
+        </div> 
+          
+          <h2 class="sub-header">Borrow Book</h2>
+      <div class="table-responsive">
+       <form>
+        <label for="inputID" class="sr-only">Book ID</label>
+        <input type="user_id" id="inputUserID" class="form-control" placeholder="Book ID" required autofocus>
+        <label for="inpuTitle" class="sr-only">Book Title</label>
+        <input type="title" id="inputTitle" class="form-control" placeholder="Title" required>
+        <label for="inputCategory" class="sr-only">Book Category</label>
+        <input type="category" id="category" class="form-control" placeholder="Categoty" required autofocus>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Borrow</button>
+        </form>
+         
+      </div>
+    </div>
+
+  </body>
+</html>

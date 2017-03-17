@@ -1,58 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
- 
-<head>
-    <title>E-Library Platform </title>
- 
- 
-    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
- 
-    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
- 
- 
-</head>
- 
-<body>
- 
-    <div class="container">
-        <div class="header">
-            <nav>
-                <ul class="nav nav-pills pull-right">
-                    <li role="presentation" class="active"><a href="#">Home</a>
-                    </li>
-                    <li role="presentation"><a href="/sign_in">Sign In</a>
-                    </li>
-                    <li role="presentation"><a href="/sign_up">Sign Up</a>
-                    </li>
-                </ul>
-            </nav>
-            <h3 class="text-muted">E-Library</h3>
-        </div>
+{% extends "base.html" %}
 
-        <div class="slider">
-        </div>
+{% block body %}
 
- 
-        <div class="jumbotron">
-            <h1>E-library</h1>
-            <p class="lead"></p>
-            <p><a  href="/sign_up" role="button">Sign up today</a>
-            </p>
-        </div>
- 
-        <div class="row marketing">
-                <h4>E-library Platform</h4>
-                <p>View books from our catalog, borrow the books using the e-library platform</p>
-                <p>Lets create a world of research</p>
- 
-                
-        </div>
- 
-        <footer class="footer">
-            <p>&copy; e-library 2017</p>
-        </footer>
- 
+    <div class="jumbotron text-center">
+        <h1>E-library</h1>
+        <p class="lead"></p>
+        <p><a  href="/sign_up" role="button">Sign up today</a>
+        </p>
     </div>
-</body>
- 
-</html>
+
+    <div class="row">
+        <h4>E-library Platform</h4>
+        <p>View books from our catalog, borrow the books using the e-library platform</p>
+        <p>Lets create a world of research</p>
+    </div>
+
+{% endblock body %}

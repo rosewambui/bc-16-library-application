@@ -1,47 +1,21 @@
-<!DOCTYPE html>
-<html >
-  <head>
-    
-    <title>signup </title>
+{% extends "base.html" %}
 
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+{% block body %}
 
-    <link href="../static/css/viewpoint.css" rel="stylesheet">
+    <form class="form-signin" action="sign_up" method="Post">
+      {{ form.csrf_token }}
+      <h2 class="form-signin-heading">Please Create an Account</h2>
+      <label for="inputName" class="sr-only">Your Name</label>
+      {{form.username(id="inputName", class="form-control",
+              placeholder="Your Name", autofocus="autofocus")}}
+      <label for="inputPassword" class="sr-only">Password</label>
+      {{form.password(id="inputPassword", class="form-control",
+       placeholder="Password")}}
+      <label for="inputPassword2" class="sr-only">confirm pass</label>
+      {{form.confirm_password(id="inputPassword2", class="form-control",
+       placeholder="Confirm Password")}}
 
-    <link href="../static/css/signin.css" rel="stylesheet">
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+    </form>
 
-    
-    </head>
-
-  <body>
-
-    <div class="container">
-       {% if form.errors %}
-        <div>{{form.errors}}</div>
-      {% endif %}
-
-      <form class="form-signin" action="sign_up" method="Post">
-        {{ form.csrf_token }}
-        <h2 class="form-signin-heading">Please Create an Account</h2>
-        <label for="inputName" class="sr-only">Your Name</label>
-        {{form.username(id="inputName", class="form-control",
-                placeholder="Your Name", autofocus="autofocus")}}
-        <label for="inputPassword" class="sr-only">Password</label>
-        {{form.password(id="inputPassword", class="form-control",
-         placeholder="Password")}}
-        <label for="inputPassword2" class="sr-only">confirm pass</label>
-        {{form.confirm_password(id="inputPassword2", class="form-control",
-         placeholder="Confirm Password")}}
-        
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
-      </form>
-
-    </div> 
-
-
-  </body>
-  <footer class="footer">
-            <p>&copy; e-library 2017</p>
-  </footer>
- 
-</html>
+{% endblock body %}
